@@ -40,7 +40,7 @@ def over?(board)
   won?(board) or full?(board) or draw?(board)
 end
 
-def winner?(board)
+def winner(board)
   if won?(board)
     board[won?(board)[0]]   # pick first index from winning combination
   end
