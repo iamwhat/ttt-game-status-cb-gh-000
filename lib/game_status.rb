@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |item|
-    
+
   end
 end
 
@@ -25,4 +25,12 @@ def full?(board)
   board.all? do |number|
     number=="X" or number=="O"
   end
+end
+
+def draw?(board)
+  full?(board) and !won?(board)
+end
+
+def over?(board)
+  won?(board) or full?(board) or draw?(board)
 end
